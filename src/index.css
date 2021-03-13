@@ -1,0 +1,552 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #0478ed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --danger-color: #d9534f;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+/* Login */
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  font-weight: bold;
+  background: var(--dark-color);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  opacity: 0.8;
+}
+.form .message a {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.form .message {
+  font-size: 12px;
+  margin-top: 12px;
+}
+/* .navbar a:hover {
+  border-bottom: 2px #fff solid;
+} */
+
+.footer {
+  margin-top: 52px;
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 15px;
+  color: white;
+  bottom: 0;
+}
+/* Table */
+
+.movies {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.movies td,
+.movies th {
+  border-bottom: 2px solid #ddd;
+  padding: 15px;
+}
+
+.movies td > a {
+  text-decoration: none;
+  color: black;
+}
+
+/* .movies tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.movies tr:hover {
+  background-color: rgb(245, 247, 248);
+} */
+
+.movies th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--primary-color);
+  color: white;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.shock-list {
+  border-right: 1px solid black;
+  min-height: 100vh;
+  width: 50%;
+}
+
+.shock_list_btn {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.btn {
+  font-size: inherit;
+  background: none;
+  outline: none;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.shock {
+  padding: 20px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid rgb(192, 185, 185);
+}
+.shock:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.shock_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.shock_title {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.shock_row {
+  margin-top: 10px;
+}
+
+.shock_label {
+  margin-right: 5px;
+}
+
+.shock_value {
+  font-weight: 300;
+}
+
+.indented {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.instruction {
+  white-space: pre-wrap;
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 5px;
+  column-gap: 40px;
+  justify-content: flex-start;
+}
+
+.shock-edit {
+  padding: 30px;
+  margin-top: 70px;
+  padding-top: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.shock-edit {
+  padding: 30px;
+  padding-top: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.remove-btn {
+  text-align: end;
+}
+
+.remove-btns {
+  padding: 0;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 10px;
+  column-gap: 40px;
+}
+
+.shock-edit_label {
+  font-weight: bold;
+}
+
+.shock-edit_input {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: inherit;
+  padding: 5px 10px;
+  outline: none;
+  width: 100%;
+}
+
+textarea.shock-edit_input {
+  resize: none;
+  height: 200px;
+}
+
+.shock-edit__ingredient-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.ing-add {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .grid-view,
+  .shock-edit__ingredient-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Utilities */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+/* Backgrounds & Coloured Button */
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+  color: #fff;
+}
+
+/* Text-Color */
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+/* Text-Size */
+.lead {
+  font-size: 20px;
+}
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+/* Alert */
+.alert {
+  background-color: var(--light-color);
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.alert i {
+  margin-right: 10px;
+}
+
+.alert-success {
+  background-color: var(--success-color);
+  color: #ffff;
+}
+
+.alert-error {
+  background-color: var(--danger-color);
+  color: #ffff;
+}
+/* Margin */
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* Padding */
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  margin: 1rem;
+}
+
+.p-2 {
+  margin: 1.5rem;
+}
+
+.p-3 {
+  margin: 2rem;
+}
+
+.p-4 {
+  margin: 3rem;
+}
+
+.p-5 {
+  margin: 4rem;
+}
